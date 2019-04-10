@@ -1,0 +1,495 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "e8f5c3a8-0d28-4119-a052-338931d7d367",
+      "lastModified": "2019-04-08T15:13:13.274+08:00",
+      "name": "Maximo"
+    },
+    {
+      "type": "Service",
+      "id": "1fca3bb3-3272-442a-b249-6a29451054a7",
+      "lastModified": "2019-04-08T14:29:53.089+08:00",
+      "name": "Authentication",
+      "parentId": "e8f5c3a8-0d28-4119-a052-338931d7d367"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": ""
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/login"
+      },
+      "id": "58bb56ea-7b19-45bd-9158-9312e5c290a3",
+      "lastModified": "2019-04-08T14:38:07.879+08:00",
+      "name": "BASIC authentication",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Authorization",
+          "value": "Basic bWF4YWRtaW46aWlzaUAxMjM="
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1fca3bb3-3272-442a-b249-6a29451054a7"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "j_username=maxadmin&j_password=iisi@123"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/login"
+      },
+      "id": "6e2d59e7-dc48-427a-acd3-3150fd3eac0a",
+      "lastModified": "2019-04-08T14:36:08.688+08:00",
+      "name": "FORM authentication",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1fca3bb3-3272-442a-b249-6a29451054a7"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/login"
+      },
+      "id": "319c0613-ba0b-4a9f-a2f0-c0ce400185f5",
+      "lastModified": "2019-04-08T14:38:52.155+08:00",
+      "name": "MAXAUTH",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "maxauth",
+          "value": "bWF4YWRtaW46aWlzaUAxMjM="
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "1fca3bb3-3272-442a-b249-6a29451054a7"
+    },
+    {
+      "type": "Service",
+      "id": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6",
+      "lastModified": "2019-04-08T14:28:42.808+08:00",
+      "name": "Basic Info",
+      "parentId": "e8f5c3a8-0d28-4119-a052-338931d7d367"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/apimeta"
+      },
+      "id": "b7381ae6-670f-40e6-acc3-dbd9b7db19d3",
+      "lastModified": "2019-04-08T14:28:53.851+08:00",
+      "name": "apimeta",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/license"
+      },
+      "id": "980be1bf-c0d2-4db3-aaca-d3439eb0c60c",
+      "lastModified": "2019-04-08T14:29:26.705+08:00",
+      "name": "license",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/members"
+      },
+      "id": "865eef8e-c0c4-40d0-b337-be7df6b320e4",
+      "lastModified": "2019-04-08T14:29:22.588+08:00",
+      "name": "members",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/products"
+      },
+      "id": "049d1e88-6204-47e0-b5ef-dfeff7df9089",
+      "lastModified": "2019-04-08T14:29:18.206+08:00",
+      "name": "products",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/systeminfo"
+      },
+      "id": "d98ded77-6639-48be-9b02-d5e4341fbcf3",
+      "lastModified": "2019-04-08T14:29:13.585+08:00",
+      "name": "systeminfo",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/whoami"
+      },
+      "id": "ef91e1b2-ff11-4e7f-90b0-b3a2e96d5f65",
+      "lastModified": "2019-04-08T14:29:08.686+08:00",
+      "name": "whoami",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "5a76733f-4836-4ed0-ab2d-c8fc1530c2b6"
+    },
+    {
+      "type": "Service",
+      "description": "",
+      "id": "81aee5d4-8187-4381-ab9b-117db2fe8e7b",
+      "lastModified": "2019-04-08T14:39:33.994+08:00",
+      "name": "Example",
+      "parentId": "e8f5c3a8-0d28-4119-a052-338931d7d367"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "oslc.select",
+              "value": "assetnum,location,description,status"
+            },
+            {
+              "enabled": true,
+              "name": "oslc.pageSize",
+              "value": "10"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc/os/mxasset"
+      },
+      "id": "4ccc0874-32b4-4999-9006-d2abe45aa94d",
+      "lastModified": "2019-04-08T15:13:13.275+08:00",
+      "name": "Select Clause example",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "81aee5d4-8187-4381-ab9b-117db2fe8e7b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "name": "lean",
+              "value": "1"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:9080",
+        "path": "/maximo/oslc"
+      },
+      "id": "a732dffa-41d9-4c7b-865d-6c316e6c46b5",
+      "lastModified": "2019-04-08T14:49:04.402+08:00",
+      "name": "summary example",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "81aee5d4-8187-4381-ab9b-117db2fe8e7b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "MAX7606.VM:80",
+        "path": "/maximo/oslc/whoami"
+      },
+      "id": "489bfa95-42ca-4d75-8564-beb585044ba9",
+      "lastModified": "2019-04-08T14:50:37.094+08:00",
+      "name": "whoami",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "81aee5d4-8187-4381-ab9b-117db2fe8e7b"
+    }
+  ]
+}
